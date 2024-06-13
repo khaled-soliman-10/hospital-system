@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    direction: rtl;
+    scroll-behavior: smooth;
+    outline: none;
+    border: none;
+}
+
+:root {
+    --main-color: #1400ff;
+    --main-dark: #1000bf;
+    --sec-color: #1712e2;
+    --thd-color: #5b43e0;
+    --white-color: #fff;
+    --black-color: #000;
+    --gray-color: #737373;
+    --gray2-color: #bbbbbbc7;
+    --gray-week: #ababab50;
+}
+
+.section {
+    background-image: url("../imgs/dd.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+.section::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #9a9a9a34;
+    z-index: -1;
+    top: 0;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    row-gap: 20px;
+    column-gap: 30px;
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    background-image: linear-gradient(to right, var(--main-dark),var(--main-color));
+    color: var(--white-color);
+    border-radius: 10px;
+    font-size: 17px;
+    padding: 5px 10px;
+    transition: .3s;
+    margin-top: 20px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.active {
+    color: var(--main-color) !important;
+}
+
+.width {
+    width: 50% !important;
+}
+
+.login {
+    background-color: var(--gray-week);
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+    align-items: center;
+}
+
+.login > h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: var(--white-color);
+}
+
+.login > p {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #c9c9c9;
+    margin-bottom: 50px;
+}
+
+.login form {
+    gap: 15px;
+}
+
+.login form div {
+    width: 100%;
+}
+
+.login label {
+    color: var(--white-color);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.login input,
+.login select {
+    background-color: var(--gray2-color);
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: var(--black-color);
+}
+
+.login form div:nth-of-type(2) {
+    position: relative;
+}
+
+.login form div:nth-of-type(2) i {
+    position: absolute;
+    left: 5px;
+    bottom: 10px;
+    font-size: 14px;
+    color: var(--black-color);
+    cursor: pointer;
+}
+
+.login form > p {
+    text-align: center;
+    width: 100%;
+    color: #f13b3b;
+    text-shadow: 0 0 15px var(--black-color);
+    font-size: 16px;
+}

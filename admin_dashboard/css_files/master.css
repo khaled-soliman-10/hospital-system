@@ -1,0 +1,640 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    direction: rtl;
+}
+/* main rules */
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --dark-blue:#180d8d;
+    --light-blue:#3532b4;
+    --main-backg:#eee;
+    --sec-backg: #ddd;
+    --thrd-backg: #9e9e9e61;
+    --white-color: #fff;
+    --black: #333;
+    --green: #57b6f6;
+}
+input,
+select {
+  border: none;
+}
+input:focus,
+select:focus {
+  outline: none;
+}
+/* end main rules */
+.page{
+    height: 100vh;
+    overflow: hidden;
+}
+/* sidebar */
+.sidebar {
+  width: 250px;
+  background-image: linear-gradient(110deg,var(--dark-blue),var(--light-blue));
+  color: var(--white-color);
+  transition: 0.5s;
+  /* height: 100%; */
+}
+.sidebar .logo {
+  width: 100px;
+  margin-right: -20px;
+}
+.sidebar .title h2 {
+  font-size: 30px;
+  color: var(--white-color);
+  margin-left: 30px;
+}
+.sidebar .title h2 span {
+  color: var(--green);
+}
+.sidebar .title i {
+  font-size: 20px;
+  color: var(--white-color);
+  cursor: pointer;
+}
+.sidebar .links {
+  flex-direction: column;
+}
+.sidebar .links li {
+  border-radius: 20px;
+  padding: 0 5px 0 5px;
+  transition: 0.3s;
+}
+.sidebar .links li a {
+  color: var(--white-color);
+  display: block;
+}
+.sidebar .links li a span {
+  font-weight: bold;
+  font-size: 16px;
+}
+.sidebar .links .listted {
+  display: block;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+.sidebar .links .listted .tog {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+.sidebar .links .num {
+  transition: 0.3s;
+  background-color: transparent !important;
+}
+
+.sidebar .links .num .list {
+  display: none;
+  transition: 0.3s;
+}
+.sidebar .links .num .list a {
+  display: block;
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 20px;
+}
+.sidebar .log-out {
+  width: 80%;
+  bottom: 5px;
+}
+.sidebar .links li:hover,
+.sidebar .links .active {
+  background-color: #ffffff6e;
+}
+.sidebar .log-out button span,
+.sidebar .log-out button i {
+  color: var(--white-color);
+}
+.sidebar .log-out button {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: .3s;
+}
+.sidebar .log-out button:hover {
+  background-color: #eb51518a;
+}
+.sidebar .log-out button span {
+  font-size: 16px;
+}
+/* end sidebar */
+/* header */
+
+.content .header {
+  background-color: var(--main-backg);
+}
+.content .header .search form {
+  gap: 10px;
+}
+.content input[type="search"] {
+  padding: 5px 40px 5px 5px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+.content .header .search i {
+  right: 15px;
+  top: 10px;
+}
+.content .header .search input[type="submit"],
+.b-s {
+  background-image: linear-gradient(110deg,var(--dark-blue),var(--light-blue));
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  color: var(--white-color);
+  cursor: pointer;
+}
+.content input[type="search"]:focus {
+  outline: none;
+}
+.content .header .avatar {
+  width: 30px;
+}
+/* end header */
+/* main page */
+.details .detail{
+  background-image: linear-gradient(110deg, var(--dark-blue),var(--light-blue)60%, var(--dark-blue));
+  width: 400px;
+  height: 120px;
+  padding: 20px 40px;
+  color: var(--white-color);
+  border-radius: 10px;
+}
+.details .detail i{
+  font-size: 25px;
+}
+.details .detail p{
+  font-size: 20px;
+  font-weight: normal;
+}
+.content .list {
+  background-color: var(--main-backg);
+  height: 49%;
+}
+.mP-doc-table {
+  height: 66%;
+  overflow-y: auto;
+}
+.mP-doc-table table {
+  border-spacing: 0;
+  text-align: center;
+}
+.mP-doc-table table td {
+  padding: 5px;
+  transition: .3s;
+}
+.mP-doc-table table td form button {
+  width: 50px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.mP-doc-table table thead tr {
+  background-color: var(--sec-backg);
+}
+.mP-doc-table table tbody tr:hover td {
+  background-color: var(--sec-backg);
+}
+.mP-doc-table table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid var(--black);
+}
+.doc_details {
+  /* background-color: var(--main-backg); */
+  height: 87%;
+  padding: 2% 0;
+}
+.doc_details .column {
+  background-color: var(--main-backg);
+  color: var(--black);
+  height: 100%;
+  border-radius: 10px;
+}
+.doc_details .column h3 {
+  padding: 7px 20px;
+  transition: .5s;
+}
+.doc_details .column h3:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.doc_details .column h3:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.doc_details .column h3:hover {
+  background-color: var(--sec-backg);
+}
+.doc_details .column h3:not(:last-child){
+  border-bottom: 1px solid var(--thrd-backg);
+}
+.doc_details .column .col {
+  width: 500px;
+}
+
+/* end main page */
+/* doctor */
+.content .doctors-list,
+.departments-list {
+  background-color: var(--main-backg);
+  height: 87%;
+}
+.content .head img{
+  width: 120px;
+  margin-left: -20px;
+}
+.content .doctor_table,
+.department_table {
+  height: 84.5%;
+  overflow-y: auto;
+}
+.content .doctor_table table,
+.content .department_table table {
+  border-spacing: 0;
+  text-align: center;
+}
+.content .doctor_table table td,
+.content .department_table table td{
+  padding: 5px;
+  transition: .3s;
+}
+.content .doctor_table table thead tr,
+.content .department_table table thead tr{
+  background-color: var(--sec-backg);
+}
+.content .doctor_table table tbody tr:not(:last-child) td,
+.content .department_table table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid var(--black);
+}
+.content .doctor_table table tbody tr:hover td,
+.content .department_table table tbody tr:hover td {
+  background-color: var(--sec-backg);
+}
+.content .department_table table tbody .modefie  a,
+.content .doctor_table table tbody .modefie  a {
+  /* width: 50px; */
+  font-size: 18px;
+  color: var(--black);
+}
+.content .doctor_table table tbody .modefie form button,
+.content .department_table table tbody .modefie form button{
+  /* width: 50px; */
+  color: var(--black);
+  border: none;
+  /* padding: 3px; */
+  font-size: 18px;
+  cursor: pointer;
+}
+/* end doctor&epartments */
+/* add-department */
+.add-department {
+  background-color: var(--main-backg);
+}
+.add-department form label {
+  display: block;
+}
+.add-department form input,
+.add-department form select {
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+/* end add-department */
+.statistics {
+  width: 400px;
+  height: 200px;
+  background-image: linear-gradient(110deg, var(--dark-blue),var(--light-blue)60%,var(--dark-blue));
+  color: var(--white-color);
+  border-radius: 10px;
+}
+.statistics .one i {
+  font-size: 20px;
+}
+.statistics  button{
+  width: 100px;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-image: linear-gradient(110deg, var(--dark-blue),var(--light-blue)60%,var(--dark-blue));
+  color: var(--white-color);
+  border: 1px solid var(--main-backg);
+  transition: .5s;
+}
+.statistics  button:hover {
+  background-color: var(--white-color);
+  background-image: none;
+  color: var(--black);
+}
+.rpl_content {
+  background-color: var(--main-backg);
+  height: 57%;
+  border-radius: 10px;
+}
+.rpl_content .rpl_table{
+  height: 71.5%;
+  overflow-y: auto;
+}
+.rpl_content .rpl_table table {
+  border-spacing: 0;
+}
+.rpl_content .rpl_table table td{
+  padding: 5px;
+  transition: .5s;
+}
+.rpl_content .rpl_table table thead tr {
+  background-color: var(--sec-backg);
+}
+.rpl_content .rpl_table table thead tr td:first-child{
+  border-top-right-radius: 10px;
+}
+.rpl_content .rpl_table table thead tr td:last-child{
+  border-top-left-radius: 10px;
+}
+.rpl_content .rpl_table table tbody tr:hover td{
+  background-color: var(--sec-backg);
+}
+.rpl_content .rpl_table table tbody tr:not(:last-child) td{
+  border-bottom: 1px solid var(--black);
+}
+.rpl_content .rpl_table table tbody tr:last-child td:first-child {
+  border-bottom-right-radius: 10px;
+}
+.rpl_content .rpl_table table tbody tr:last-child td:last-child{
+  border-bottom-left-radius: 10px;
+}
+.main_rpl .show-hide {
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(238, 238, 238, .8);
+  display: none;
+}
+.main_rpl .show-hide i {
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.main_rpl .show-hide .cont {
+  height: 80%;
+}
+/* add doctor content */
+.content .add-doctor {
+  height: 87%;
+  background-color: var(--main-backg);
+  padding: 0 15px;
+  border-radius: 10px;
+}
+.content .add-doctor .title img {
+  width: 100px;
+}
+.content .add-doctor .forms {
+  height: 100%;
+  overflow-y: auto;
+  padding: 0 10px 10px 10px;
+}
+.content .add-doctor .forms div label {
+  display: block;
+  font: 10px;
+}
+.content .add-doctor .forms div input,
+.content .add-doctor .forms  select {
+  border-top: 1px solid blue;
+  border-right: 1px solid blue;
+  border-left: 1px solid blue;
+  border-bottom: none;
+  height: 35px;
+  border-radius: 8px;
+}
+.content .add-doctor .forms div input:focus,
+.content .add-doctor .forms .department select:focus {
+  outline: none;
+}
+
+.content .add-doctor .forms .inputs div {
+  width: 500px;
+}
+.content .add-doctor .forms .doc_Photo {
+  height: 30px;
+}
+.content .add-doctor .forms .doc_Photo input {
+  display: none;
+}
+.content .add-doctor .forms .doc_Photo label {
+  font-size: 18px;
+  font-weight: bold;
+  background-image: linear-gradient(110deg,#180d8d,#3532b4);
+  position: absolute;
+  color: white;
+  padding: 3px 10px;
+  margin: 20px 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.content .add-doctor .forms .doc_Photo label i{
+  margin-right: 30px;
+}
+.content .add-doctor .forms .save-button button {
+  width: 120px;
+  padding: 3px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  margin-top: 50px;
+}
+/*end add doctor content */
+/* coments */
+.coments {
+  height: 85%;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 15px;
+  background-color:var(--main-backg);
+  overflow-y: auto;
+  align-content: start;
+}
+.coments div {
+  padding: 5px;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid var(--light-blue);
+  font-size: 15px;
+  border-radius: 10px;
+  height: 150px;
+}
+.coments div .from {
+  right: -55px;
+}
+/* end coments */
+/* patient list */
+.patients_list{
+  background-color: var(--main-backg);
+  height: 87%;
+}
+.patients_list .pt_page{
+  height: 82%;
+  overflow-y: auto;
+}
+.patients_list .pt_page table,
+.last_login .lastlogin_table table,
+.salaries .salaries_table table{
+  border-spacing: 0;
+  text-align: center;
+}
+.patients_list .pt_page table td,
+.last_login .lastlogin_table table td,
+.salaries .salaries_table table td {
+  padding: 5px;
+  transition: .5s;
+}
+.patients_list .pt_page table thead tr,
+.last_login .lastlogin_table table thead tr,
+.salaries .salaries_table table thead tr {
+  background-color: var(--sec-backg);
+}
+.patients_list .pt_page table thead tr td:first-child,
+.last_login .lastlogin_table table thead tr td:first-child,
+.salaries .salaries_table table thead tr td:first-child {
+  border-top-right-radius: 10px;
+}
+.patients_list .pt_page table thead tr td:last-child,
+.last_login .lastlogin_table table thead tr td:last-child,
+.salaries .salaries_table table thead tr td:last-child {
+  border-top-left-radius: 10px;
+}
+.patients_list .pt_page table tbody tr:not(:last-child) td,
+.last_login .lastlogin_table table tbody tr:not(:last-child) td,
+.salaries .salaries_table table tbody tr:not(:last-child) td{
+  border-bottom: 1px solid var(--black);
+}
+.patients_list .pt_page table tbody tr:hover td,
+.last_login .lastlogin_table table tbody tr:hover td,
+.salaries .salaries_table table tbody tr:hover td{
+  background-color: var(--sec-backg);
+}
+.patients_list .pt_page table tbody tr:last-child td:first-child,
+.last_login .lastlogin_table table tbody tr:last-child td:first-child,
+.salaries .salaries_table  table tbody tr:last-child td:first-child{
+  border-bottom-right-radius: 10px;
+}
+.patients_list .pt_page table tbody tr:last-child td:last-child,
+.last_login .lastlogin_table table tbody tr:last-child td:last-child,
+.salaries .salaries_table table tbody tr:last-child td:last-child{
+  border-bottom-left-radius: 10px;
+}
+.patients_list .pt_page table tbody td form button {
+  width: 50px;
+  border: none;
+  border-radius: 10px;
+}
+/* end patient list */
+/* last_login */
+.last_login {
+  background-color: var(--main-backg);
+  height: 87%;
+}
+.last_login .lastlogin_table {
+  height: 84.5%;
+}
+/* end last_login */
+/* patient_search */
+.patient_search {
+    width: 97%;
+    background-color: var(--main-backg);
+    border-radius: 10px;
+    transition: 1s;
+}
+.patient_search form label {
+    display: block;
+}
+.patient_search form input {
+    width: 500px;
+    padding: 5px 10px !important;
+    border-radius: 10px;
+    border: none;
+}
+.patient_search form input:focus {
+  outline: none;
+}
+.patient_search form button {
+    display: block;
+}
+.patient_search .patient_table {
+    transition: .5s;
+}
+.patient_search .patient_table table {
+    border-spacing: 0;
+    transition: .5s;
+    text-align: center;
+}
+.patient_search .patient_table table td {
+  padding: 5px;
+  transition: .3s;
+}
+.patient_search .patient_table table thead tr {
+    background-color: var(--sec-backg);
+}
+.patient_search .patient_table table tbody tr:hover td {
+  background-color: var(--sec-backg);
+}
+.patient_search .patient_table table .dots {
+    width: 60px;
+    height: 30px;
+    font-size: 18px;
+    color: black;
+    background-color: #cdcdcd;
+    border-radius: 10px;
+}
+.patient_search .doc_table table .modefie a,
+.patient_search .doc_table table .modefie button,
+.patient_search .department_search table .modefie button,
+.patient_search .department_search table .modefie a {
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  color: var(--black);
+  padding: none;
+}
+/* end patient_search */
+/* salaries */
+.salaries {
+  background-color: var(--main-backg);
+  height: 87%;
+}
+.salaries .salaries_table {
+  height: 83.5%;
+  overflow-y: auto;
+}
+/* end salaries */
+/* edit department */
+.edit_department {
+  background-color: var(--main-backg);
+  border-radius: 10px;
+  height: 230px;
+}
+.edit_department input {
+  border-radius: 10px;
+  height: 35px;
+}
+.edit_department button {
+  width: 100px;
+  border-radius: 10px;
+  padding: 3px 5px;
+  cursor: pointer;
+}
+/* end edit department */
