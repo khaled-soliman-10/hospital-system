@@ -1,0 +1,802 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    direction: rtl;
+    scroll-behavior: smooth;
+    border: none;
+    outline: none;
+}
+
+:root {
+    --main-color: #1400ff;
+    --aqua-color: #57b6f6;
+    --main-dark: #180d8d;
+    --sec-color: #1712e2;
+    --thd-color: #3532b4;
+    --white-color: #fff;
+    --black-color: #000;
+    --gray-color: #414141;
+    --gray2-color: #c9c9c9;
+    --gray-week: #ababab50;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.start {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.clm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    row-gap: 20px;
+    column-gap: 30px;
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    background-image: linear-gradient(to right, var(--sec-color),var(--thd-color));
+    color: var(--white-color);
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 5px 10px;
+    transition: .3s;
+}
+
+.active {
+    background-color: var(--gray-week) !important;
+}
+
+.top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-image: linear-gradient(to right, var(--sec-color),var(--main-dark));
+    color: var(--white-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 16px;
+    box-shadow: 0 0 10px 1px var(--main-color);
+    cursor: pointer;
+    transition: .3s;
+    display: none;
+}
+
+.display {
+    display: flex;
+}
+
+.width {
+    width: 280px !important;
+}
+
+.top:hover {
+    transform: scale(1.08);
+}
+
+@media (max-width: 860px) {
+    .top {
+        display: none !important;
+    }
+}
+
+.logo {
+    gap: 10px;
+}
+
+.logo img {
+    width: 30px;
+}
+
+.logo h1 {
+    font-size: 30px;
+    color: var(--white-color);
+}
+
+.logo h1 span {
+    color: var(--aqua-color);
+}
+
+/* side start */
+
+.main {
+    height: 100vh;
+    background-color: var(--white-color);
+    gap: 0;
+    overflow: hidden;
+}
+
+aside {
+    height: 100%;
+    width: 60px;
+    padding: 10px;
+    justify-content: space-between !important;
+    transition: .5s;
+    background-image: linear-gradient(110deg , var(--main-dark),var(--thd-color) 60%, var(--main-dark));
+}
+
+aside .main-content {
+    width: 100%;
+}
+
+aside header {
+    width: 100%;
+    justify-content: space-between !important;
+    margin-bottom: 20px;
+}
+
+aside header button {
+    width: 30px;
+    height: 30px;
+    font-size: 23px;
+    background-color: transparent;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+aside .links {
+    width: 100%;
+}
+
+aside .links .link {
+    padding: 2px 10px;
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 20px;
+    font-size: 15px;
+    color: var(--white-color);
+    transition: .3s;
+}
+
+aside .links .link:hover {
+    background-color: var(--gray-week);
+}
+
+aside form {
+    width: 100%;
+    border-radius: 20px;
+}
+
+aside form button {
+    width: 100% !important;
+    border-radius: inherit;
+    background-color: transparent;
+    background-image: none !important;
+    cursor: pointer;
+    transition: .3s;
+}
+
+aside form button i {
+    font-size: 17px;
+}
+
+aside form button:hover {
+    /* background-color: var(--gray-week); */
+    background-color: #eb51518a;
+}
+
+/* content start */
+
+.content {
+    background-color: var(--white-color);
+    width: 100%;
+    height: 100%;
+    gap: 0px;
+    position: relative;
+    /* padding: 20px; */
+}
+
+.content header,
+.content .patients .head {
+    width: 100%;
+    background-color: var(--gray-week);
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+.content header h1 {
+    font-size: 18px;
+    color: var(--black-color);
+}
+
+.content .center div {
+    /* gap: 0;  */
+    justify-content: flex-start;
+    background-color: var(--white-color);
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 350px;
+}
+
+.content .center input {
+    width: 100%;
+    font-size: 14px;
+    color: var(--black-color);
+}
+
+.content .center i {
+    color: var(--black-color);
+    font-size: 14px;
+}
+
+.content .center button {
+    width: 80px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.content header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+/*  start details*/
+.content .details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .details .boxs{
+    display: flex;
+    /* margin-right: 100px;  */
+    margin-top: 20px;
+    gap: 50px;
+}
+.content .details .boxs .box{
+    background-image: linear-gradient(110deg , var(--main-dark),var(--thd-color) 60%, var(--main-dark));
+    width: 400px;
+    height: 200px;
+    border-radius: 8px ;
+    position: relative;
+}
+.content .details .boxs .box .h-title{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: white;
+}
+.content .details .boxs .box .h-title h3{
+    margin-right: 5px;
+}
+.content .details .boxs .box .main-d{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+/* .content .details .boxs .box .main-d h4:first-child{
+    margin-right: 43px;
+} */
+/*  end details*/
+
+.content .patients {
+    padding: 20px;
+    width: 100%;
+    gap: 0;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.content .patients .head {
+    border-radius: 10px 10px 0 0;
+}
+
+.content .patients .head h1 {
+    font-size: 18px;
+    color: var(--black-color);
+} 
+.content .pays ,
+.not-pays{
+    display: flex;
+    align-items: center;
+}
+.content .pays p{
+    margin-left: 14px;
+}
+.content .not-pays p{
+    margin-left: 21px;
+}
+.content .pays .fa-circle::before {
+    content: "\f111";
+    color: green;
+}
+.content .not-pays .fa-circle::before {
+    content: "\f111";
+    color: red;
+}
+
+.content .patients .head img {
+    width: 40px; 
+}
+
+.content .patients .table {
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+    background-color: var(--gray-week);
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+
+.content .patients table {
+    width: 100%;
+    max-height: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.content table td {
+    padding: 10px 12px;
+}
+
+.content table thead {
+    background-color: var(--gray2-color);
+    color: var(--black-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.content table thead td:last-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.content table thead td:first-child {
+    border-radius: 0px 15px 15px 0px;
+}
+
+.content table tbody tr:not(:last-of-type) {
+    border-bottom: 1px solid var(--gray-color);
+    transition: .3s;
+}
+
+.content table tbody {
+    font-size: 15px;
+    color: var(--gray-color);
+}
+
+.content table tbody tr:hover {
+    background-color: var(--gray-week);
+}
+
+.content table tbody td:last-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.content table tbody td:first-child {
+    border-radius: 0px 15px 15px 0px;
+}
+.content .table table tr td form .paying{
+    background-color: green;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: none;
+    margin-right: 17px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.content table tr td form .paying h5{
+    margin-left: 1px;
+}
+/* end page 1 */
+.content .add-patient{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #eee;
+    height: 300px;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+/* .content .add-patient h3{
+    margin-right: 10px;
+    margin-top: 10px;
+} */
+.content .add-patient .type-patient{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.content .add-patient .type-patient .type-one,
+.content .add-patient .type-patient .type-two, .add-patient .type-patient .type-three{
+    margin: 20px;
+    /* margin-top: 65px; */
+    left: 50%;
+    /* transform: translateX(-70%); */
+    background-image: linear-gradient(110deg , #180d8d,#3532b4 60%, #180d8d);
+    width: 160px;
+    height: 80px;
+    border-radius: 5px;
+    
+}
+.content .add-patient .type-patient .type-one h4,
+.content .add-patient .type-patient .type-two h4, .add-patient .type-patient .type-three h4{
+    /* margin-top: 20px; */
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .add-patient img{
+    position: absolute;
+    left: 0;
+    width: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.content .add-details{
+margin-top: 10px;
+background-color: #eee;
+width: 100%;
+height: 100%;
+padding: 10px;
+border-radius: 20px;
+}
+.content .add-details .send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.content .add-details .send div{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.content .add-details .send div label{
+    margin-right: 20px;
+}
+.content .add-details div input{
+    margin-right: 20px;
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    transition: 0.3s;
+    border: 1px solid var(--gray-color);
+}
+.content .add-details .send select{
+    border-radius: 5px;
+    transition: 0.3s;
+    border: 1px solid var(--gray-color);
+}
+.content .add-details div input:focus{
+    outline: none;
+}
+.content .add-details .send select:hover{
+    border: 1px solid blue;
+}
+.content .add-details div input:hover{
+    border: 1px solid blue;
+}
+.content .add-details div select{
+    width: 300px;
+    height: 35px;
+    margin-right: 20px;
+    transition: .4s;
+    border: 1px solid var(--gray-color);
+}
+.content .add-details div select:hover{
+    border: 1px solid blue;
+}
+.content .add-details .submit{
+    margin-right: 250px;
+    margin-top: 20px;
+    bottom: 30px;
+    background-image: linear-gradient(110deg , #180d8d,#3532b4 60%, #180d8d); 
+    width: 100px;
+    height: 30px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+/* end page2 addpatient */
+/* start online page */
+.content .patients .tabl {
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+    background-color: var(--gray-week);
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+
+.content .patients table {
+    width: 100%;
+    max-height: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.content table td {
+    padding: 10px 12px;
+}
+
+.content table thead {
+    background-color: var(--gray2-color);
+    color: var(--black-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.content table thead td:last-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.content table thead td:first-child {
+    border-radius: 0px 15px 15px 0px;
+}
+
+.content table tbody tr:not(:last-of-type) {
+    border-bottom: 1px solid var(--gray-color);
+    transition: .3s;
+}
+
+.content table tbody {
+    font-size: 15px;
+    color: var(--gray-color);
+}
+
+.content table tbody tr:hover {
+    background-color: var(--gray-week);
+}
+
+.content table tbody td:last-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.content table tbody td:first-child {
+    border-radius: 0px 15px 15px 0px;
+}
+.content .tabl table tr td form .paying{
+    background-color: red;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: none;
+    margin-right: 17px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.content table tr td form .paying h5{
+    margin-left: 1px;
+}
+/* end online page */
+/* start report */
+.content .send-r{
+    background-color: #eee;
+    position: relative;
+    height: 230px;
+    width: 100%;
+    margin-top: 10px;
+}
+.content .send-r .report{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    background-image: linear-gradient(110deg , #180d8d,#3532b4 60%, #180d8d);
+    width: 350px;
+    height: 150px;
+    border-radius: 8px;
+}
+.content .send-r .report .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 40px;
+}
+.content .send-r .report .title h4{
+    margin-right: 10px;
+}
+.content .send-r .report .submits{
+    margin-right: 130px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: white;
+    width: 95px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 5px 0;
+    background-color: transparent;
+}
+.content .send-r .report .submits:hover{
+    background-color: var(--white-color);
+    color: black;
+}
+.content .send-r img{
+    position: absolute;
+    width: 40px;
+    left: 0;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.content .reportss{
+    margin-top: 10px;
+    background-color: #eee;
+    height: 350px;
+    width: 100%;
+}
+.content .reportss h4{
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.content .reportss .r-tabl{
+    height: 280px;
+    overflow: auto;
+}
+.content .reportss  table{
+    background-color: #eee;
+    border-spacing: 0;
+    width: 95%;
+    margin-right: 20px;
+}
+.content .reportss table thead{
+    background-color: rgb(196, 194, 194);
+}
+.content .reportss table thead tr td{
+    font-weight: bold;
+    padding: 3px;
+}
+.content .reportss table thead td:last-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.content .reportss table thead td:first-child {
+    border-radius: 0px 15px 15px 0px;
+}
+.content .reportss table tbody tr td{
+    border-bottom: 1px solid rgb(136, 127, 127);
+}
+.content .reportss table tbody tr td a{
+    /* width: 35px; */
+    border-radius: 5px;
+    padding: 5px 20px;
+    transition: 0.3s;
+    font-size: 13px;
+    background-color: var(--gray2-color);
+    color: var(--black-color);
+    font-size: 15px;
+    font-weight: 500;
+}
+.content .reportss table tbody tr td a:hover{
+    background-color: rgb(189, 188, 188);
+}
+.content .reportss table tbody tr td:last-child button{
+    /* width: 60px;
+    height: 36px; */
+    background-color: rgb(190, 190, 190);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+.content .reportss table tbody tr td:last-child button h3{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -4px;
+}
+/* end report */
+.report-send {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray2-color);
+    padding: 30px;
+    display: none;
+    z-index: 20;
+}
+
+.report-send form {
+    border: 2px solid var(--black-color);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--white-color);
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.report-send form i {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 30px;
+    color: var(--black-color);
+    cursor: pointer;
+
+}
+
+.report-send form header {
+    background-color: transparent;
+}
+
+.report-send form header img {
+    border-radius: 0;
+    height: fit-content;
+}
+
+.report-send form header h1 {
+    font-size: 25px;
+    color: var(--black-color);
+}
+
+.report-send form .body {
+    border-bottom: 1px solid var(--black-color);
+    border-radius: 0;
+    width: 100%;
+    height: 80%;
+}
+
+.report-send form .body h1 {
+    direction: ltr;
+    font-size: 25px;
+    color: var(--black-color);
+}
+
+.report-send form .body textarea {
+    resize: none;
+    width: 100% !important;
+    height: 100% !important;
+    font-size: 17px;
+    color: var(--black-color);
+}
+
+.report-send form > button {
+    width: 120px;
+}
+

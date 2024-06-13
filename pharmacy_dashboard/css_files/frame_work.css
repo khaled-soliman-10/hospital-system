@@ -1,0 +1,94 @@
+/* positions */
+.relative{
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+/* display */
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+/* componants */
+.flex-c-c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-sb-c{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-0-c{
+    display: flex;
+    align-items: center;
+}
+.flex-sb-0{
+    display: flex;
+    justify-content: space-between;
+}
+.flex-gap{
+    display: flex;
+    gap: 20px;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.width100{
+    width:100%;
+}
+/* paddning & margin */
+.p-10{
+    padding: 10px;
+}
+.p-15{
+    padding: 15px;
+}
+.p-20{
+    padding: 20px;
+}
+.p-rl-20{
+    padding: 0 20px;
+}
+.p-rl-10{
+    padding: 0 10px;
+}
+.m-10{
+    margin: 10px;
+}
+.m-20{
+    margin: 20px;
+}
+.m-t-20{
+    margin-top: 20px;
+}
+.m-t-10{
+    margin-top: 10px;
+}
+.m-b-15{
+    margin-bottom: 15px;
+}
+.m-b-20{
+    margin-bottom: 20px;
+}
+.m-l-20{
+    margin-left: 20px;
+}
+.m-r-20{
+    margin-right: 20px;
+}
+.m-l-20{
+    margin-left: 20px;
+}
+.m-r-10{
+    margin-right: 10px;
+}
+/* font weight */
+.bold {
+    font-weight: bold;
+}

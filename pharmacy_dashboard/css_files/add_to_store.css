@@ -1,0 +1,27 @@
+/* add_medicine */
+.store_med {
+  height: 87%;
+  background-color: var(--main-backg);
+}
+.store_med form .father {
+  gap: 100px;
+  margin-bottom: 40px;
+}
+.store_med form div label {
+  display: block;
+}
+.store_med form input,
+.store_med form select {
+  width: 450px;
+  border: 1px solid var(--light-blue);
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+}
+.store_med form input:focus {
+  outline: none;
+}
+.store_med form button{
+  width: 120px;
+  padding: 5px 10px;
+}
+/* end add_medicine */

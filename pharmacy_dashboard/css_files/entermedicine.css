@@ -1,0 +1,70 @@
+/* enter medicine */
+.content .enter-medicine {
+  height: 87% ;
+  background-color: var(--main-backg);
+}
+.enter-medicine h2{
+  font-weight: normal;
+}
+.enter-medicine .data {
+  gap: 100px;
+}
+.enter-medicine .data label {
+  display: block;
+  font-weight: bold;
+}
+.enter-medicine .data div {
+  width: 400px;
+}
+.enter-medicine .data select:focus,
+.enter-medicine .data input:focus{
+  outline: none;
+}
+.enter-medicine .data select,
+.enter-medicine .data input {
+  border: 1px solid var(--light-blue);
+  padding: 5px 10px 5px 0;
+  border-radius: 10px;
+}
+.enter-medicine form .add {
+  width: 130px;
+  padding: 5px 20px;
+}
+.enter-medicine .medicine_list {
+  background-color: var(--sec-backg);
+  height: 66%;
+  padding-top: 20px;
+}
+.enter-medicine .medicine_list .searching {
+  gap: 200px;
+}
+.enter-medicine .medicine_list .searching form input {
+  width: 350px;
+  padding: 5px 10px 5px 0;
+  border-radius: 10px;
+  border: none;
+} 
+.enter-medicine .medicine_list .searching form input:focus {
+  outline: none;
+}
+.enter-medicine .medicine_list .table {
+  height: 89%;
+  overflow-y: auto;
+}
+.enter-medicine .medicine_list .table table td {
+  padding: 5px;
+  transition: .3s;
+}
+.enter-medicine .medicine_list .table table thead {
+  background-color: var(--thrd-backg);
+}
+.enter-medicine .medicine_list .table table tr:hover td{
+  background-color: var(--thrd-backg);
+}
+.enter-medicine .medicine_list .table table td:last-child button{
+  width: 50px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* end  enter medicine*/

@@ -1,0 +1,461 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    direction: rtl;
+}
+/* main rules */
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --dark-blue:#180d8d;
+    --light-blue:#3532b4;
+    --main-backg:#eee;
+    --sec-backg: #ddd;
+    --thrd-backg: #9e9e9e61;
+    --white-color: #fff;
+    --black: #333;
+    --green: #57b6f6;
+}
+/* end main rules */
+.page{
+    height: 100vh;
+    overflow: hidden;
+}
+/* sidebar */
+.sidebar {
+  width: 250px;
+  background-image: linear-gradient(110deg,var(--dark-blue),var(--light-blue));
+  color: var(--white-color);
+  transition: 0.5s;
+}
+.sidebar .logo {
+  width: 100px;
+  margin-right: -20px;
+}
+.sidebar .title h2 {
+  font-size: 30px;
+  color: var(--white-color);
+  margin-left: 30px;
+}
+.sidebar .title h2 span {
+  color: var(--green);
+}
+.sidebar .title i {
+  font-size: 20px;
+  color: var(--white-color);
+  cursor: pointer;
+}
+.sidebar .links {
+  flex-direction: column;
+}
+.sidebar .links li {
+  border-radius: 20px;
+  padding: 0 5px 0 5px;
+  transition: 0.3s;
+}
+.sidebar .links li a {
+  color: var(--white-color);
+  display: block;
+}
+.sidebar .links li a span {
+  font-weight: bold;
+  font-size: 16px;
+}
+.sidebar .links .listted {
+  display: block;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+.sidebar .links .listted .tog {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+.sidebar .links .num {
+  transition: 0.3s;
+  background-color: transparent !important;
+}
+
+.sidebar .links .num .list {
+  display: none;
+  transition: 0.3s;
+}
+.sidebar .links .num .list a {
+  display: block;
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 20px;
+}
+.sidebar .log-out {
+  width: 80%;
+  bottom: 5px;
+}
+.sidebar .links li:hover,
+.sidebar .links .active {
+  background-color: #ffffff6e;
+}
+.sidebar .log-out button span,
+.sidebar .log-out button i {
+  color: var(--white-color);
+}
+.sidebar .log-out button {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: .3s;
+}
+.sidebar .log-out button:hover {
+  background-color: #eb51518a;
+}
+.sidebar .log-out button span {
+  font-size: 16px;
+}
+/* end sidebar */
+/* content */
+/* header */
+
+.content .header {
+  background-color: var(--main-backg);
+}
+.content .header .search form {
+  gap: 10px;
+}
+.content input[type="search"] {
+  padding: 5px 40px 5px 5px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+.content .header .search i {
+  right: 15px;
+  top: 10px;
+}
+.content .header .search input[type="submit"],
+.b-s {
+  background-image: linear-gradient(110deg,var(--dark-blue),var(--light-blue));
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  color: var(--white-color);
+  cursor: pointer;
+}
+.content input[type="search"]:focus {
+  outline: none;
+}
+.content .header .avatar {
+  width: 30px;
+}
+/* end header */
+/* main-details */
+.content .main_details .details {
+  width: 500px;
+  height: 230px;
+  color: var(--white-color);
+  background-image: linear-gradient(110deg, var(--dark-blue), var(--light-blue));
+  border-radius: 10px;
+}
+.content .main_details .details .text  h3,
+.content .main_details .details .text i{
+  font-size: 25px;
+}
+.content .main_details .details .number h3,
+.content .main_details .details .number p{
+  font-weight: normal;
+}
+.content .main_details .details .number h3 {
+  letter-spacing: 2px;
+  font-size: 30px;
+}
+.content .main_details .expired,
+.content .main_details .details .number {
+  text-align: center;
+}
+.content .main_details .expired img{
+  width: 200px;
+}
+.content .main_details .expired form input {
+  width: 130px;
+  background-image: linear-gradient(110deg, var(--dark-blue),var(--light-blue));
+  color: var(--white-color);
+  font-size: 18px;
+  font-weight: normal;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* end main_details */
+/* medicines */
+.medicines {
+  background-color: var(--main-backg);
+  height: 52%;
+}
+.medicines .search_medicine {
+  height: 60px;
+}
+.medicines .search_medicine h2{
+  font-weight: normal;
+}
+.medicines .search_medicine img{
+  width: 120px;
+}
+/* end medicines */
+/* table */
+.table{
+  height: 85%;
+  overflow-y: auto;
+}
+.table table{
+  border-spacing: 0;
+  text-align: center;
+}
+.table table tr td:first-child{
+  border-radius: 0 10px 10px 0;
+}
+.table table tr td:last-child{
+  border-radius: 10px 0 0 10px;
+}
+.table table thead{
+  background-color: var(--sec-backg);
+}
+.table table tbody tr {
+  transition: .3s;
+}
+.table table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid var(--black);
+}
+.table table tbody tr:hover {
+  background-color: var(--sec-backg);
+}
+/* end table */
+/* hidding table */
+.show-hide{
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #9e9e9ec4;
+  display: none;
+  /* color: #9e9e9e; */
+}
+.show-hide i {
+  font-size: 40px;
+  cursor: pointer;
+}
+.show-hide .hidden_table {
+  background-color: var(--sec-backg);
+  height: 90%;
+}
+.show-hide .hidden_table img{
+  width: 120px;
+}
+.show-hide .hidden_table .search_medicine {
+  height: 60px;
+}
+.show-hide .hidden_table .table{
+  height: 91%;
+  overflow-y: auto;
+}
+.show-hide .hidden_table table thead {
+  background-color: #9e9e9e;
+}
+.show-hide .hidden_table table td {
+  transition: .3s;
+}
+.show-hide .hidden_table table tbody tr:hover td {
+  background-color: #9e9e9e;
+}
+.show-hide .hidden_table table td button {
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.show-hide .hidden_table table td button i{
+  width: 50px;
+  font-size: 16px;
+}
+/* end hidding table */
+/* end content */
+/* add patient content */
+.content .parent{
+  background-color: var(--main-backg);
+  height: 88%;
+}
+.content .parent .inputs,
+.content .parent .reciet {
+  width: 350px;
+}
+.content .parent .inputs form input[type="text"],
+.content .parent .inputs form select{
+  padding: 5px 10px 5px 0;
+  border-radius: 10px;
+  border: 1px solid var(--light-blue);
+}
+.content .parent .inputs form input[type="text"]:focus,
+.content .parent .inputs form select:focus{
+  outline: none;
+}
+.content .parent .inputs form button {
+  width: 120px;
+  padding: 5px 10px;
+  margin-top: 20px;
+}
+.content .parent .reciet{
+  background-color: var(--white-color);
+  height: fit-content;
+  border: 1px solid var(--light-blue);
+  border-radius: 10px;
+}
+.content .parent .reciet .table_reciet {
+  height: 180px;
+  overflow-y: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.content .parent .reciet table {
+  border-spacing: 0;
+}
+.content .parent .reciet table td {
+  text-align: center;
+  padding: 3px;
+  transition: .3s;
+}
+.content .parent .reciet table thead tr {
+  background-color: var(--sec-backg);
+}
+.content .parent .reciet table thead td:first-child {
+  border-top-right-radius: 10px;
+}
+.content .parent .reciet table thead td:last-child{
+  border-top-left-radius: 10px;
+}
+.content .parent .reciet table tbody tr:hover td {
+  background-color: var(--sec-backg);
+}
+.content .parent .reciet form button {
+  width: 150px;
+  padding: 5px 15px;
+}
+.content .show-hide .hidden-reciet {
+  margin: -40px auto auto auto;
+  width: 420px;
+  height: 85%;
+  background-color: var(--white-color);
+  border: 1px solid var(--light-blue);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.content .show-hide .hidden-reciet .logo {
+  text-align: center;
+}
+.content .show-hide .hidden-reciet img{
+  width: 200px;
+  margin-top: -20px;
+}
+.content .show-hide .hidden-reciet .logo h1{
+  margin-top: -60px;
+}
+.content .show-hide .hidden-reciet .logo .date {
+  padding: 0 10px;
+}
+.content .show-hide .hidden-reciet .logo .date p {
+  font-size: 14px;
+}
+.content .show-hide .hidden-reciet .table_reciet {
+  height: 200px;
+  overflow-y: auto;
+}
+.content .show-hide .hidden-reciet .table_reciet table {
+  border-spacing: 0;
+  text-align: center;
+}
+.content .show-hide .hidden-reciet .table_reciet table thead tr{
+  background-color: var(--sec-backg);
+}
+.content .sh2 form input {
+  width: 150px;
+  padding: 5px 10px;
+}
+.content .show-hide
+/* end add patient content */
+/* add_medicine */
+.store_med {
+  height: 87%;
+  background-color: var(--main-backg);
+}
+.store_med form .father {
+  gap: 100px;
+  margin-bottom: 40px;
+}
+.store_med form div label {
+  display: block;
+}
+.store_med form input,
+.store_med form select {
+  width: 450px;
+  border: 1px solid var(--light-blue);
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+}
+.store_med form input:focus {
+  outline: none;
+}
+.store_med form button{
+  width: 120px;
+  padding: 5px 10px;
+}
+/* end add_medicine */
+
+@media print{
+  .sh2 {
+    margin-top: 50px;
+    background-color: transparent;
+  }
+  .page {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .page .patient_content {
+    width: 420px;
+    height: 830px;
+  }
+  .sidebar,
+  .content .header,
+  .content .parent,
+  .sh2 i,
+  .sh2 form input{
+    display: none;
+  }
+  .sh2 .logo .log {
+    padding: 0 10px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sh2 .logo .log img {
+    width: 80px;
+    margin-top: -50px;
+  }
+  .sh2 .logo .log h1{
+    font-size: 20px;
+  }
+  .sh2 .hidden-reciet .table_reciet {
+    overflow-y: none;
+    height: fit-content !important;
+    margin-bottom: 10px;
+  }
+  .sh2 .hidden-reciet .total {
+    padding: 5px;
+  }
+}

@@ -1,0 +1,816 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    direction: rtl;
+    scroll-behavior: smooth;
+    border: none;
+    outline: none;
+}
+
+:root {
+    --main-color: #1400ff;
+    --aqua-color: #57b6f6;
+    --main-dark: #180d8d;
+    --sec-color: #1712e2;
+    --thd-color: #3532b4;
+    --white-color: #fff;
+    --black-color: #000;
+    --gray-color: #414141;
+    --gray2-color: #c9c9c9;
+    --gray-week: #ababab50;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.start {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.clm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    row-gap: 20px;
+    column-gap: 30px;
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    background-image: linear-gradient(to right, var(--sec-color),var(--thd-color));
+    color: var(--white-color);
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 5px 10px;
+    transition: .3s;
+}
+
+.active {
+    background-color: var(--gray-week) !important;
+}
+
+.top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-image: linear-gradient(to right, var(--sec-color),var(--main-dark));
+    color: var(--white-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 16px;
+    box-shadow: 0 0 10px 1px var(--main-color);
+    cursor: pointer;
+    transition: .3s;
+    display: none;
+}
+
+.display {
+    display: flex;
+}
+
+.width {
+    width: 280px !important;
+}
+
+.top:hover {
+    transform: scale(1.08);
+}
+
+@media (max-width: 860px) {
+    .top {
+        display: none !important;
+    }
+}
+
+.logo {
+    gap: 10px;
+}
+
+.logo img {
+    width: 30px;
+}
+
+.logo h1 {
+    font-size: 30px;
+    color: var(--white-color);
+}
+
+.logo h1 span {
+    color: var(--aqua-color);
+}
+
+/* side start */
+
+.main {
+    height: 100vh;
+    background-color: var(--white-color);
+    gap: 0;
+    overflow: hidden;
+}
+
+aside {
+    height: 100%;
+    width: 60px;
+    padding: 10px;
+    justify-content: space-between !important;
+    transition: .5s;
+    background-image: linear-gradient(110deg , var(--main-dark),var(--thd-color) 60%, var(--main-dark));
+}
+
+aside .main-content {
+    width: 100%;
+}
+
+aside header {
+    width: 100%;
+    justify-content: space-between !important;
+    margin-bottom: 20px;
+}
+
+aside header button {
+    width: 30px;
+    height: 30px;
+    font-size: 23px;
+    background-color: transparent;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+aside .links {
+    width: 100%;
+}
+
+aside .links .link {
+    padding: 2px 10px;
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 20px;
+    font-size: 15px;
+    color: var(--white-color);
+    transition: .3s;
+}
+
+aside .links .link:hover {
+    background-color: var(--gray-week);
+}
+
+aside form {
+    width: 100%;
+    border-radius: 20px;
+}
+
+aside form button {
+    width: 100% !important;
+    border-radius: inherit;
+    background-color: transparent;
+    background-image: none !important;
+    cursor: pointer;
+    transition: .3s;
+}
+
+aside form button i {
+    font-size: 17px;
+}
+
+aside form button:hover {
+    /* background-color: var(--gray-week); */
+    background-color: #eb51518a;
+}
+
+/* content start */
+
+.content {
+    background-color: var(--white-color);
+    width: 100%;
+    height: 100%;
+    gap: 0px;
+}
+
+.content header,
+.content .patients .head {
+    width: 100%;
+    background-color: var(--gray-week);
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+.content header h1 {
+    font-size: 18px;
+    color: var(--black-color);
+}
+
+.content form div {
+    /* gap: 0; */
+    justify-content: flex-start;
+    background-color: var(--white-color);
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 350px;
+}
+
+.content form input {
+    width: 100%;
+    font-size: 14px;
+    color: var(--black-color);
+}
+
+.content form i {
+    color: var(--black-color);
+    font-size: 14px;
+}
+
+.content form button {
+    width: 80px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.content header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+/*  start details*/
+.details {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.content .details .boxs{
+    display: flex;
+    align-items: center;
+    /* margin-right: 100px; */
+    margin-top: 20px;
+    gap: 50px;   
+}
+.content .details .boxs .box{
+    background-image: linear-gradient(110deg , var(--main-dark),var(--thd-color) 60%, var(--main-dark));
+    width: 400px;
+    height: 200px;
+    border-radius: 8px ;
+    position: relative;
+    /* font-size: 20px; */
+}
+.content .details .boxs .box .h-title{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: white;
+}
+.content .details .boxs .box .h-title h3{
+    margin-right: 5px;
+}
+.content .details .boxs .box .main-d{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+}
+/*  end details*/
+
+.content .patients {
+    padding: 20px;
+    width: 100%;
+    gap: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content .patients .head {
+    border-radius: 10px 10px 0 0;
+}
+
+.content .patients .head h1 {
+    font-size: 18px;
+    color: var(--black-color);
+} 
+
+.content .patients .head img {
+    width: 40px; 
+}
+
+.content .patients .table {
+    width: 100%;
+    height: 85%;
+    overflow-y: auto;
+    background-color: var(--gray-week);
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+
+.content .patients table {
+    width: 100%;
+    max-height: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.content table td {
+    padding: 10px 12px;
+}
+
+.content table thead {
+    background-color: var(--gray2-color);
+    color: var(--black-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.content table thead td:last-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.content table thead td:first-child {
+    border-radius: 0px 15px 15px 0px;
+}
+
+.content table tbody tr:not(:last-of-type) {
+    border-bottom: 1px solid var(--gray-color);
+    transition: .3s;
+}
+
+.content table tbody {
+    font-size: 15px;
+    color: var(--gray-color);
+}
+
+.content table tbody tr:hover {
+    background-color: var(--gray-week);
+}
+
+.content table tbody td:last-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.content table tbody td:first-child {
+    border-radius: 0px 15px 15px 0px;
+}
+/* start content add */
+.content .add-patient{
+    display: flex;
+    background-color: #eee;
+    padding: 5px;
+    margin-top: 15px;
+    /* margin-right: 10px; */
+    /* margin-left: 10px; */
+    width: 100%;
+    height: 88%;
+    border-radius: 20px;
+}
+.content .add-pat h2{
+    margin-right: 10px;
+}
+.content .add-pat .send-d{
+    margin-top: 20px;
+    margin-right: 15px;
+}
+.content .add-pat .send-d input{
+    border: 1px solid black;
+    height: 35px;
+    border-radius:5px ;
+    transition: 0.4s;
+}
+.content .add-pat .send-d .select select{
+    width: 300px;
+    border: 1px solid black;
+    height: 35px;
+    border-radius:5px ;
+    transition: 0.4s;
+}
+.content .add-pat .send-d .select select:hover{
+    border: 1px solid blue;
+}
+.content .add-pat .send-d input:hover{
+    border: 1px solid blue;
+}
+.content .add-pat button{
+    width: 100px;
+    margin-right: 15px;
+    margin-top: 15px;
+    color: white;
+    background-image: linear-gradient(110deg , var(--main-dark),var(--thd-color) 60%, var(--main-dark));
+    border-radius: 8px;
+}
+.content .add-patient .tabl{
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-right: 400px;
+    margin-top: 20px;
+    width: 288px;
+    height: 400px;
+}
+.content .add-patient .tabl table{
+    border-spacing: 1px;
+    width: 282px;
+}
+.content .add-patient .tabl table thead tr th {
+    padding: 0px;
+}
+.content .add-patient .tabl table tr td{
+    padding: 1px;
+    border-bottom: 0.5px solid var(--gray2-color);
+}
+.content .add-patient .tabl .price{
+    display: flex;
+}
+.content .add-patient .tabl .price div p{
+    font-size: 14px;
+}
+.content .add-patient .tabl .price div:nth-child(2){
+    margin-right: 20px;
+}
+.content .add-patient .tabl .price div:nth-child(2) p:nth-child(2){
+    border-bottom: 1px solid var(--gray2-color);
+}
+.content .add-patient .tabl button{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-image: linear-gradient(110deg , var(--main-dark),var(--thd-color) 60%, var(--main-dark));
+    color: white;
+    border-radius: 5px;
+}
+/*  start rosheta */
+.content .add-patient{
+    position: relative;
+}
+
+.content .add-patient .rosheta-k {
+    width: 100%;
+    height: 100%;
+    background-color: #eeeeeec7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    display: none;
+}
+.content .add-patient .rosheta-k > i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    cursor: pointer;
+}
+.content .add-patient .tables{
+    border: 2px solid blue;
+    border-radius: 5px;
+    border-top-right-radius:20px;
+    border-bottom-left-radius:20px;
+    background-color: #fff;
+    z-index: 5;
+}
+.content .add-patient .tables .logo a h1{
+    color: #000;
+}
+.content .add-patient .tables .logo a h1 span{
+    color: blue;
+}
+.content .add-patient .tables .name{
+    margin-right: 10px;
+}
+.content .add-patient .tables .time{
+    display: flex;
+}
+.content .add-patient .tables .time p:nth-child(1){
+    margin-right: 10px;
+}
+.content .add-patient .tables .time p:nth-child(2){
+    margin-right:70px ;
+}
+.content .add-patient .tables table{
+    border-spacing: 1px;
+    width: 100% !important;
+}
+.content .add-patient .tables table thead tr th {
+    padding: 0px;
+}
+.content .add-patient .tables table tr td{
+    padding: 1px;
+    border-bottom: 0.5px solid var(--gray2-color);
+}
+.content .add-patient .tables .price{
+    display: flex;
+    border-bottom: 1px solid black;
+}
+.content .add-patient .tables .price div p{
+    font-size: 14px;
+}
+.content .add-patient .tables .price div:nth-child(2){
+    margin-right: 70px;
+}
+.content .add-patient .tables .price div:nth-child(2) p:nth-child(2){
+    border-bottom: 1px solid var(--gray2-color);
+}
+.content .add-patient .tables .place{
+    display: flex;
+}
+.content .add-patient .tables .place .exactly{
+    font-size: 13px;
+    margin-right: 0px;
+}
+.content .add-patient .tables .place img{
+    width: 37px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.content .add-patient .printed {
+    background-image: linear-gradient(110deg , var(--main-dark),var(--thd-color) 60%, var(--main-dark));
+    color: white;
+    border-radius: 5px;
+}
+/* end rosheta */
+/* end content add */
+/* start content add analysis */
+.content .add-analysis{
+    display: flex;
+    margin-top: 10px;
+    min-height: 220px;
+    background-color: #eee;
+    width: 100%;
+}
+.content .add-analysis h2{
+    margin-right:15px ;
+}
+.content .add-analysis .add-analy{
+    margin-top: 50px;
+}
+.content .add-analysis .add-analy .send-d button{
+    margin-top: 30px;
+    background-image: linear-gradient(110deg , var(--main-dark),var(--thd-color) 60%, var(--main-dark));
+    border-radius: 8px;
+    color: white;
+}
+.content .add-analysis .add-analy .send-d input{
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    height: 35px;
+    transition: 0.3s;
+}
+.content .add-analysis .add-analy .send-d .select{
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+.content .add-analysis .add-analy .send-d .select select{
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.content .add-analysis .add-analy .send-d .select select:hover{
+    border: 1px solid blue;
+}
+.content .add-analysis .add-analy .send-d input:hover{
+    border: 1px solid blue;
+}
+.content .add-analysis .add-analy .send-d{
+    margin-right: 20px;
+} 
+.content .patients{
+    margin-top: 10px;
+}
+.content .patients .tablee {
+    width: 100%;
+    height: 85%;
+    overflow-y: auto;
+    background-color: var(--gray-week);
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+
+.content .patients table {
+    width: 100%;
+    max-height: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.content table td {
+    padding: 10px 12px;
+}
+
+.content table thead {
+    background-color: var(--gray2-color);
+    color: var(--black-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.content table thead td:last-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.content table thead td:first-child {
+    border-radius: 0px 15px 15px 0px;
+}
+
+.content table tbody tr:not(:last-of-type) {
+    border-bottom: 1px solid var(--gray-color);
+    transition: .3s;
+}
+
+.content table tbody {
+    font-size: 15px;
+    color: var(--gray-color);
+}
+
+.content table tbody tr:hover {
+    background-color: var(--gray-week);
+}
+
+.content table tbody td:last-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.content table tbody td:first-child {
+    border-radius: 0px 15px 15px 0px;
+}
+
+/* end content add analysis */
+/* start report */
+.content .send-r{
+    background-color: #eee;
+    position: relative;
+    height: 230px;
+    width: 100%;
+    margin-top: 10px;
+}
+.content .send-r .report{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    background-image: linear-gradient(110deg , #180d8d,#3532b4 60%, #180d8d);
+    width: 350px;
+    height: 150px;
+    border-radius: 8px;
+}
+.content .send-r .report .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 17px;
+}
+.content .send-r .report .title h4{
+    margin-right: 7px;
+}
+.content .send-r .report .submits{
+    margin-right: 112px;
+    margin-top: 20px;
+    background-image: linear-gradient(110deg , #180d8d,#3532b4 60%, #180d8d);
+    color: white;
+    width: 95px;
+    height: 33px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+.content .send-r .report .submits:hover{
+    background-image: linear-gradient(110deg , #ffffff,#ffffff 60%, #ffffff);
+    color: black;
+}
+.content .send-r img{
+    position: absolute;
+    width: 40px;
+    left: 0;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.content .reportss{
+    margin-top: 10px;
+    background-color: #eee;
+    height: 350px;
+    width: 100%;
+}
+.content .reportss h3{
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.content .reportss .r-tabl{
+    height: 280px;
+    overflow: auto;
+}
+.content .reportss  table{
+    background-color: #eee;
+    border-spacing: 0;
+    width: 95%;
+    margin-right: 20px;
+}
+.content .reportss table thead{
+    background-color: rgb(196, 194, 194);
+}
+.content .reportss table thead tr td{
+    font-weight: bold;
+    padding: 3px;
+}
+.content .reportss table thead td:last-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.content .reportss table thead td:first-child {
+    border-radius: 0px 15px 15px 0px;
+}
+.content .reportss table tbody tr td{
+    border-bottom: 1px solid rgb(136, 127, 127);
+}
+.content .reportss table tbody tr td button{
+    width: 35px;
+    border: 1px solid rgb(223, 141, 141);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: 0.3s;
+    font-size: 13px;
+}
+.content .reportss table tbody tr td button:hover{
+    background-color: rgb(189, 188, 188);
+}
+.content .reportss table tbody tr td:last-child button{
+    width: 60px;
+    background-color: rgb(190, 190, 190);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.content .reportss table tbody tr td:last-child button h3{
+    margin-left: 10px;
+    margin-top: 2px;
+}
+/* end report */
+
+#kh {
+    width: 100%;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+
+#kh div {
+    width: 45%;
+    background-color: transparent;
+}
+
+.kh {
+    width: 100%;
+}
+
+.kh input {
+    width: 300px !important;
+    padding: 0 10px;
+    
+}
+
+.reportss table td a {
+    color: var(--black-color);
+    background-color: var(--gray2-color);
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.reportss table td button {
+    color: var(--black-color);
+    background-color: var(--gray2-color) !important;
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin-bottom: 0 !important;
+}

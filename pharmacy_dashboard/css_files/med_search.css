@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    direction: rtl;
+}
+/* main rules */
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --dark-blue:#180d8d;
+    --light-blue:#3532b4;
+    --main-backg:#eee;
+    --sec-backg: #ddd;
+    --thrd-backg: #9e9e9e61;
+    --white-color: #fff;
+    --black: #333;
+    --green: #57b6f6;
+}
+/* patient_search */
+.patient_search {
+    width: 97%;
+    background-color: var(--main-backg);
+    border-radius: 10px;
+    transition: 1s;
+}
+.patient_search form label {
+    font-weight: bold;
+    display: block;
+}
+.patient_search form input {
+    width: 500px;
+    padding: 5px 10px !important;
+    border-radius: 10px;
+}
+.patient_search form button {
+    display: block;
+    margin-top: 20px;
+}
+.patient_search .patient_table {
+    /* display: none; */
+    transition: .5s;
+}
+.patient_search .patient_table table {
+    width: 100%;
+    border-spacing: 0;
+    transition: .5s;
+    text-align: center;
+}
+.patient_search .patient_table table thead tr {
+    background-color: var(--sec-backg);
+}
+/* end patient_search */
